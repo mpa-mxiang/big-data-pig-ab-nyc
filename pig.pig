@@ -1,4 +1,4 @@
-listing = LOAD 'C:\Users\max99\Downloads\AB_NYC_2019.csv' USING PigStorage(',')
+listing = LOAD 'AB_NYC_2019.csv' USING PigStorage(',')
 as
 (id: int, name: chararray,host_id: int, host_name: chararray,
 neighbourhood_group: chararray,neighbourhood: chararray,
@@ -22,6 +22,6 @@ output_list = FOREACH group_list GENERATE group,
 SUM(filter_list.price)/COUNT(filter_list.price) AS average, 
 MAX(filter_list.availability_365) AS max_365;
 
-STORE output_list INTO '/Users/micha/cp422_a2/AirBndB_ neighbourhood _ group';
+STORE output_list INTO '/AirBndB_ neighbourhood _ group';
 
 
