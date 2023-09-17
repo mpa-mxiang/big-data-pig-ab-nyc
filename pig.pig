@@ -1,4 +1,4 @@
-listing = LOAD 'AB_NYC_2019.csv' USING PigStorage(',')
+listing = LOAD 'AB_NYC_2019(1).csv' USING PigStorage(',')
 as
 (id: int, name: chararray,host_id: int, host_name: chararray,
 neighbourhood_group: chararray,neighbourhood: chararray,
